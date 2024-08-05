@@ -1,8 +1,4 @@
-// tests/taskManager.test.ts
-
 import { initializeTasks, getActiveTasks, completeTask, getCompletedTasks, getAllTasks, createTask, updateTask, deleteTask } from "@/modules/taskManager";
-
-
 
 describe('Task Manager', () => {
   beforeEach(() => {
@@ -37,7 +33,7 @@ describe('Task Manager', () => {
     expect(activeTasks).toEqual(
       [{"completed": false, "description": "Learn basic Git commands.", "group": 2, "id": 3, "persona": "Intern", "title": "Basic Git"}, {"completed": false, "description": "Collaborate on a Git repository.", "group": 2, "id": 4, "persona": "Intern", "title": "Git Collaboration"}])
       
-    ;
+    );
   });
 
   test('should fetch all tasks', () => {
@@ -54,7 +50,6 @@ describe('Task Manager', () => {
         expect.objectContaining({ title: 'API Consumption' }),
         expect.objectContaining({ title: 'Final Project' }),
         expect.objectContaining({ title: 'Project Presentation' })
-
       ])
     );
   });
